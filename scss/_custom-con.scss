@@ -1,0 +1,15 @@
+@mixin my-container {
+    padding: 0px 12px;
+    $my-var: calc(100% - 1494px);
+    margin: 0px calc($my-var / 2);
+
+    @media (min-width:1600px) {
+        $my-var: calc(100% - 1494px);
+        margin: 0px calc($my-var / 2);
+    }
+
+}
+
+.my-container {
+    @include my-container();
+}

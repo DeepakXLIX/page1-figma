@@ -1,0 +1,250 @@
+//my custom container
+
+@mixin my-special-container {
+    $my-var: calc(100% - 1320px);
+    margin-left: calc($my-var / 2);
+    margin-right: auto;
+    padding: 0px 12px;
+
+    @media (max-width:576px) {
+        margin-left: 0px;
+    }
+
+    @media (min-width:576px)and (max-width:767px) {
+        $my-var: calc(100% - 540px);
+        margin: 0px calc($my-var / 2);
+    }
+
+    @media (min-width:768px)and (max-width:991px) {
+        $my-var: calc(100% - 720px);
+        margin: 0px calc($my-var / 2);
+    }
+
+    @media (min-width:992px)and (max-width:1199px) {
+        $my-var: calc(100% - 960px);
+        margin-left: calc($my-var / 2);
+    }
+
+    @media (min-width:1200px)and (max-width:1399px) {
+        $my-var: calc(100% - 1140px);
+        margin-left: calc($my-var / 2);
+    }
+
+    @media (min-width:1400px) {
+        $my-var: calc(100% - 1320px);
+        margin-left: calc($my-var / 2);
+    }
+
+}
+
+.custom-container {
+    @include my-special-container();
+}
+
+
+
+#sirdardi {
+
+    margin: 40px 0px 80px 0px;
+    background-color: #E2F3FF;
+
+
+    .custom-container {
+        padding: 20px 0px;
+        overflow: hidden;
+
+        .row {
+
+            .common-cls:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: -40px;
+
+                .inside-div {
+                    font-size: 30px;
+                    // margin: 40px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin: 40px 0px;
+                    padding-left: 20px;
+
+
+                    @media (max-width:1400px) {
+                        font-size: 26px;
+
+                        h1 {
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    @media (max-width:1200px) {
+                        font-size: 24px;
+
+                    }
+
+                    @media (max-width:991px) {
+                        font-size: 20px;
+                        margin: 20px;
+
+                    }
+
+                    @media (max-width:768px) {
+                        font-size: 24px;
+                        margin: 8px;
+                    }
+
+
+
+                    h5 {
+                        font-size: 0.5625em;
+                        color: #0295FF;
+                    }
+
+                    h1 {
+                        font-size: 1em;
+                    }
+
+                    p {
+                        font-size: 0.5em;
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+            .common-cls:last-child {
+
+                @media screen and (max-width:768px) {
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .owl-carousel {
+                    position: relative;
+                    left: 100px;
+                    margin: 40px 0px;
+
+                    @media screen and (max-width:1000px) {
+                        left: 0;
+                    }
+
+
+
+
+                    .item {
+                        margin: 30px 0px;
+                        background-color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        // margin-top: 20px;
+
+                        @media screen and (max-width:1000px) {
+                            max-width: 90%;
+                            margin: 15px auto;
+                        }
+
+                        // @media screen and (max-width:768px) {
+                        //     max-width: 100%;
+                        //     padding: 60px 0px;
+                        // }
+
+                        >img {
+                            position: absolute;
+                            height: 45px;
+                            width: 45px;
+                            top: -30px;
+                            right: -12px;
+
+                            @media screen and (max-width:991px) {
+                                height: 30px;
+                                width: 30px;
+
+                                top: -15px;
+                            }
+                        }
+
+                        // border: 2px solid red;
+                        border-radius: 10px;
+
+                        padding: 50px 20px;
+
+
+                        @media (max-width:1400px) {
+
+                            padding: 30px 10px;
+                        }
+
+                        @media (max-width:786px) {
+
+                            padding: 10px 10px;
+                        }
+
+                        .img-wrapper {
+                            align-self: flex-start;
+
+                            img {
+                                height: 50px;
+                                width: 50px;
+                                margin-right: 5px;
+
+                                @media (max-width:992px) {
+                                    height: 30px;
+                                    width: 30px;
+
+                                }
+                            }
+
+                        }
+
+                        .content {
+                            font-size: 18px;
+
+                            @media (max-width:1400px) {
+                                font-size: 14px;
+                            }
+
+                            @media (max-width:991px) {
+                                font-size: 10px;
+                            }
+
+                            @media (max-width:768px) {
+                                font-size: 18px;
+                            }
+
+                            p {
+                                font-size: 0.8em;
+                                margin: 2px;
+                            }
+
+                            h4 {
+
+                                font-size: 1em;
+                                margin-top: 5px;
+                                font-weight: bold;
+                            }
+
+                            h6 {
+                                font-size: 0.7em;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .my-display-block {
+                display: inline-block !important;
+            }
+
+            .my-display-none {
+                display: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+#thoughts {
+    position: relative;
+
+    >img:first-child {
+        position: absolute;
+        left: 150px;
+        top: -75px;
+
+        @media (max-width:1840px) {
+            display: none;
+        }
+    }
+
+
+
+    >img:nth-child(2) {
+        position: absolute;
+        right: 150px;
+        top: 230px;
+
+        @media (max-width:1900px) {
+            display: none;
+        }
+    }
+
+
+    .container {
+        .row {
+
+            .common-cls:first-child {
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                @media (max-width:991px) {
+
+                    justify-content: center;
+                    margin-top: -50px;
+                }
+
+                img {
+                    max-height: 500px;
+
+                    @media (max-width:991px) {
+                        max-height: 300px;
+
+                    }
+
+                }
+            }
+
+            .common-cls:nth-child(2),
+            .common-cls:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .inside-div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+
+                    @media screen and (max-width:768px) {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr;
+                        width: 100%;
+
+                    }
+
+                    color: white;
+                    gap: 20px;
+
+                    .unique-cls {
+                        border-radius: 10px;
+                        padding: 30px 20px;
+                        position: relative;
+                        color: black;
+                        border: 1px solid #0295FF;
+                        font-size: 20px;
+
+
+
+                        @media (max-width:991px) {
+                            font-size: 15px;
+                            padding: 15px 15px;
+
+                        }
+
+                        @media (max-width:768px) {
+                            font-size: 20px;
+                            padding: 30px 10px;
+                            margin: 0px 10px;
+
+                        }
+
+                        &:hover {
+                            background-color: #E2F3FF;
+                            border-color:white ;
+                        }
+
+                        h5 {
+                            font-weight: 600;
+                            font-size: 1em;
+
+                            br {
+                                @media (max-width:768px) {
+                                    display: none;
+                                }
+                            }
+
+                        }
+
+                        p {
+                            width: 50%;
+                            font-size: 0.8em;
+                        }
+
+                        img {
+                            position: absolute;
+                            right: 10%;
+                            bottom: 10%;
+
+                            @media (max-width:991px) {
+                                height: 40px;
+
+                            }
+
+                            @media (max-width:768px) {
+                                height: 60px;
+
+                            }
+                        }
+                    }
+
+                    // .unique-cls:first-child {
+                    //     background-color: indianred;
+                    // }
+
+                    // .unique-cls:nth-child(2) {
+                    //     background-color: blue;
+                    // }
+
+                    // .unique-cls:nth-child(3) {
+                    //     background-color: green;
+                    // }
+
+                    // .unique-cls:last-child {
+                    //     background-color: violet;
+                    // }
+                }
+            }
+
+            .my-display-block {
+                display: inline-block !important;
+            }
+
+            .my-display-none {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+
+// <div id="thoughts">
+// <div class="container">
+//     <div class="row">
+//         <div class="col-5  ">
+//             <img src="./images/thoughts/Group 186.png" class="img-fluid" alt="">
+//         </div>
+//         <div class="col-7  bg-warning"></div>
+//     </div>

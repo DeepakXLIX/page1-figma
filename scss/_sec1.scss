@@ -1,0 +1,102 @@
+@mixin section-1-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec-1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+
+    font-size: 16px;
+
+
+    @media (max-width:768px) {
+        font-size: 12px;
+    }
+
+    @media (max-width:578px) {
+        font-size: 8px;
+    }
+
+    @media (max-width:446px) {
+        font-size: 6px;
+    }
+
+    .capsule {
+        @media (min-width:991px) {
+            display: none;
+        }
+
+        background-color: rgba(135, 207, 235, 0.15);
+        border-radius: 40px;
+        padding: 10px;
+
+        .container-fluid {
+            height: 100%;
+
+
+            .row {
+                height: 100%;
+
+                .common-cap-cls:first-child,
+                .common-cap-cls:nth-child(2) {
+
+                    @include section-1-flex();
+
+                    .inside-common-cap {
+                        @include section-1-flex();
+
+                        * {
+                            margin: 0;
+                        }
+
+                        img {
+                            margin-right: 10px;
+                        }
+
+                        P {
+                            font-weight: 600;
+                            font-size: 0.6em;
+                        }
+
+                        .wrapper>* {
+
+                            margin: 0;
+                            font-size: 1em;
+                        }
+
+                        .wrapper {
+
+                            h6 {
+                                opacity: 0.5;
+                            }
+                        }
+
+
+                    }
+                }
+
+                .common-cap-cls:last-child {
+                    button {
+                        padding: 5px 40px;
+
+                        @media (max-width:768px) {
+                            padding: 5px 30px;
+                        }
+
+                        @media (max-width:568px) {
+                            padding: 5px 20px;
+                        }
+
+                        background-color: #0295FF;
+                        color: white;
+                        font-size: 1.05em;
+                    }
+                }
+            }
+
+        }
+    }
+}

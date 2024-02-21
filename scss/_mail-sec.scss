@@ -1,0 +1,221 @@
+@mixin my-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mail-sec {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    @include my-flex;
+    position: relative;
+
+
+    >img {
+        position: absolute;
+        right: 20px;
+        top: -10px;
+
+        @media (max-width:1840px) {
+            display: none;
+        }
+    }
+
+
+    .row {
+        height: 340px;
+
+        @media (max-width:768px) {
+
+            height: 200px;
+        }
+
+        @media (max-width:640px) {
+
+            height: 180px;
+        }
+
+        @media (max-width:445px) {
+
+            height: 150px;
+        }
+
+        background-color: #E2F3FF;
+        border-radius: 20px;
+
+        .common-cls:first-child {
+            @include my-flex;
+            align-items: start;
+            flex-direction: column;
+
+            .inside-col {
+
+                font-size: 22px;
+
+                @media (max-width:991px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width:576px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width:448px) {
+                    font-size: 10px;
+                }
+
+
+                p {
+                    color: #0295FF;
+                    font-weight: 500;
+                    margin: 0;
+                    font-size: 0.8em;
+                }
+
+                h2 {
+                    font-size: 1.5em;
+
+                }
+
+
+
+            }
+
+            .input-div {
+
+                font-size: 15px;
+
+                @media (max-width:1100px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width:991px) {
+                    font-size: 10px;
+                }
+
+
+
+                position: relative;
+                @include my-flex;
+                margin-top: 40px;
+                max-width: 500px;
+
+                input {
+                    width: 100%;
+                    font-size: 1em;
+                    padding: 12px 10px;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                    }
+                
+                }
+
+                button {
+
+                    position: absolute;
+                    right: 0px;
+                    background-color: #0295FF;
+                    color: white;
+                    font-size: 1em;
+
+                    &:hover {
+                        border: 1px solid #0295FF;
+                        background-color: white;
+                        color: #0295FF;
+                    }
+
+                }
+            }
+        }
+
+
+        .common-cls:last-child {
+            // border: 1px solid green;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                max-height: 400px;
+            }
+        }
+
+    }
+}
+
+@media (max-width:986px) {
+    #mail-sec {
+        .row {
+            .common-cls:first-child {
+                font-size: 18px;
+
+                .inside-col {
+                    h2 {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:568px) {
+
+    #mail-sec {
+
+
+        .row {
+
+            background-color: #E2F3FF;
+            border-radius: 20px;
+
+            .common-cls:first-child {
+                // border: 1px solid green;
+
+                font-size: 19px;
+                flex-direction: column;
+
+
+
+                .input-div {
+
+                    display: none;
+
+
+                }
+            }
+
+
+
+
+        }
+    }
+}
+
+@media (max-width:771px) {
+
+    #mail-sec {
+        .row {
+            .common-cls:first-child {
+                .input-div {
+                    input {
+                        display: none;
+                    }
+
+                    button {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
